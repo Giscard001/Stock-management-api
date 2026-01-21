@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1769022103135",
+    "createdAt": "2026-01-21T19:01:43.135Z",
+    "weight": 1,
+    "courseId": "1769022103128",
+    "title": "Exam 1",
+    "type": "DEVOIR",
+    "date": "2025-10-10",
+    "maxScore": 20
+  }
+]

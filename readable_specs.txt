@@ -1,0 +1,803 @@
+CAHIER DES CHARGES
+Système de Gestion Scolaire - École Technique et Générale
+1. PRÉSENTATION DU PROJET
+1.1 Contexte
+L'établissement scolaire combine deux filières distinctes avec des modes de fonctionnement spécifiques. Ce projet vise à développer une plateforme web centralisée pour la gestion complète des notes, bulletins et suivi pédagogique des élèves.
+1.2 Objectifs
+du système
+152400
+38994
+Centraliser la gestion des notes pour les filières technique et générale
+Automatiser le calcul des moyennes selon les règles spécifiques à chaque filière
+Faciliter la communication entre l'administration, les enseignants, les élèves et les pare
+nts
+Garantir la sécurité et la traçabilité des données académiques
+Optimiser le processus d'édition et de validation des bulletins
+1.3 Périmètre du projet
+Le système couvre la gestion des notes, le calcul automatique des moyennes, la génération de bulletin
+s, l'import/export de données et la consultation par les différents acteurs de l'établissement.
+2. DESCRIPTION FONCTIONNELLE
+2.1 Structure Pédagogique
+2.1.1 Filière Générale
+152400
+37974
+Périodes d'évaluation
+: 3 trimestres par année scolaire
+Matières
+: Matières spécifiques à l'enseignement général
+Notation
+: Note sur 20 avec coefficient spécifique par matière
+Calcul de moyenne
+: Moyenne pondérée selon les coefficients de la filière générale
+2.1.2 Filière Tech
+nique
+152400
+37971
+Périodes d'évaluation
+: 2 semestres par année scolaire
+Matières
+: Matières spécifiques à l'enseignement technique
+Notation
+: Note sur 20 avec coefficient spécifique par matière
+Calcul de moyenne
+: Moyenne pondérée selon les coefficients de la filièr
+e technique
+2.1.3 Système de Notation
+152400
+38993
+Note sur 20 pour chaque matière
+Coefficient (pondération) spécifique pour chaque matière
+Formule de calcul : Moyenne =
+Σ
+(Note × Coefficient) /
+Σ
+(Coefficients)
+3. GESTION DES UTILISATEURS ET DROITS D'ACCÈS
+3.1 Admini
+strateur
+Rôle
+: Supervision globale du système
+Fonctionnalités
+:
+152400
+38993
+Gestion complète des utilisateurs (création, modification, suppression, activation/désactivation)
+Configuration du système (années scolaires, trimestres/semestres, matières, coefficients)
+Consultation de toutes les activités et logs du système
+Gestion des classes et affectations professeurs-matières-classes
+Sauvegarde et restauration des données
+Génération de rapports statistiques globaux
+Gestion des droits d'accès par profil
+Paramétrage de
+s règles de calcul de moyennes
+Tableau de bord
+:
+152400
+38995
+Statistiques globales de l'établissement
+Activités récentes par utilisateur
+Alertes système
+Indicateurs de performance
+3.2 Professeur
+Rôle
+: Saisie des notes des élèves
+Fonctionnalités
+:
+152400
+38998
+Consultation des c
+lasses et matières assignées
+Saisie et modification des notes pour ses matières uniquement
+Consultation de
+l'historique
+de
+saisie
+Visualisation des statistiques de classe (moyenne, min, max)
+Export des notes de ses classes en PDF/Excel
+Notification en cas
+de notes manquantes
+Restrictions
+:
+152400
+38998
+Accès limité aux classes et matières assignées
+Impossibilité de modifier une note après validation par le censeur
+Pas d'accès aux bulletins complets
+3.3 Censeur
+Rôle
+: Supervision et correction des notes
+Fonctionnalités
+:
+152400
+38996
+Consultation de toutes les notes de l'établissement
+Modification de toutes les notes (avec traçabilité)
+Validation des notes par classe/matière/période
+Génération de rapports de suivi de saisie
+Déte
+ction des anomalies (notes manquantes, incohérences)
+Import de notes via fichiers Excel
+Déblocage de notes validées si nécessaire
+Notifications
+:
+152400
+38996
+Alertes pour notes manquantes
+Demandes de modification de notes
+Statut de validation par classe
+3.4 Conseiller d'Éducation
+Rôle
+: Supervision pédagogique et correction des notes
+Fonctionnalités
+:
+152400
+38996
+Identiques à celles du censeur
+Consultation de toutes les notes
+Modification de toutes les notes (avec traçabilité)
+Validat
+ion des notes
+Suivi du comportement et de l'assiduité (optionnel)
+Génération
+de rapports
+pédagogiques
+3.5
+Proviseur
+Rôle
+: Validation finale et contrôle de qualité
+Fonctionnalités
+:
+152400
+38996
+Consultation de toutes les notes et bulletins
+Vérification de la complétude des notes par classe/période
+Visualisation des bulletins avant impression
+Validation finale pour l'impression des bulletins
+Tableau de bord des validations en cours
+Consultation de
+s statistiques générales
+Déblocage exceptionnel de bulletins validés
+Processus
+de validation
+:
+Vérification automatique de la complétude des notes
+Contrôle
+visuel
+des bulletins
+générés
+Validation par
+classe
+ou
+globale
+Autorisation
+d'impression
+3.6
+Secrétai
+re
+Rôle
+: Impression et distribution des bulletins
+Fonctionnalités
+:
+152400
+38996
+Consultation des bulletins validés par le proviseur Impression des bulletins en PDF (individuel ou par classe)
+Export en masse des bulletins
+Gestion du registre des bulletins imprimés
+Génération de listes d'émargement
+Archivage des bulletins par année scolaire
+Restrictions
+:
+152400
+38999
+Accès uniquement aux bulletins validés
+Pas de modification de notes ou de bulletins
+3.7 Parent
+Rôle
+: Consultation du suivi scolaire de son/ses enfant(s)
+Fonctionnalités
+:
+152400
+38999
+Consultation des notes de son/ses enfant(s) en temps réel
+Téléchargement des bulletins disponibles en PDF
+Visualisation des moyennes par matière et générale
+Consultation de l'histori
+que des notes
+Comparaison avec les moyennes de classe (optionnel)
+Réception de notifications (publication de notes/bulletins)
+Sécurité
+:
+152400
+38999
+Accès limité aux données de son/ses enfant(s) uniquement
+Authentification sécurisée avec mot de passe
+Traçabilité
+des
+consultations
+3.8 Élève
+Rôle
+: Consultation de son propre parcours scolaire
+Fonctionnalités
+:
+152400
+38999
+Consultation de ses notes en temps réel
+Visualisation de ses moyennes par matière et générale
+Téléchargement de ses bulletins disponibles en PDF
+Consultation de l'historique de ses notes
+152400
+38999
+Visualisation de sa progression (graphiques)
+Comparaison avec la moyenne de classe (optionnel)
+Restrictions
+:
+152400
+38999
+Accès uniquement à ses propres données
+Consultation
+en
+lecture
+seule
+4. FONCTIONNALITÉS DÉTAILLÉES
+4.1 Gestion des Notes
+4.1.1 Saisie des Notes
+152400
+38999
+Interface de saisie intuitive par classe et matière
+Saisie directe dans un tableau (type tableur)
+Validation en temps réel (note entre 0 et 20)
+Enregistrement a
+utomatique ou manuel
+Indication visuelle des notes manquantes
+Commentaires optionnels par note
+4.1.2 Modification des Notes
+152400
+38993
+Traçabilité complète (date, heure, utilisateur, ancienne/nouvelle valeur)
+Historique consultable
+Verrouillage après validation
+Déverrouillage par utilisateurs habilités avec justification
+4.1.3 Import de Notes (Excel) Format du fichier Excel
+:
+152400
+38993
+Colonnes obligatoires : Numéro matricule, Nom, Prénom, Note
+Colonnes optionnelles : Classe, Matière, Période
+Première ligne : en-têtes
+Format de note : numérique (0-20) ou texte (Absent, Dispensé)
+Processus
+d'import
+:
+Sélection
+du
+fichier
+Excel
+Validation
+du format et des données
+Prévisualisation
+des
+données
+à importer
+Confirmation et import
+Rapport d'import (succès, erreurs, avertissements)
+Contrôles
+:
+152400
+38999
+Vérification de l'existence des élèves
+Validation des plages de notes
+Détection des doublons
+Vérificatio
+n de la cohérence avec la période
+4.2 Calcul des Moyennes
+4.2.1 Filière Générale
+Moyenne par trimestre
+:
+152400
+38999
+Moyenne =
+Σ
+(Note × Coefficient) /
+Σ
+(Coefficients)
+Calcul automatique dès saisie/modification d'une note
+Exclusion des matières non notées du calcul
+Moyenne annuelle
+:
+152400
+38999
+Moyenne annuelle = (Moyenne T1 + Moyenne T2 + Moyenne T3) / 3
+Possibilité de pondération des trimestres (optionnel)
+4.2.2 Filière Techniqu
+e
+Moyenne par semestre
+:
+152400
+38999
+Moyenne =
+Σ
+(Note × Coefficient) /
+Σ
+(Coefficients)
+Calcul automatique et instantané
+Moyenne annuelle
+:
+Moyenne annuelle = (Moyenne S1 + Moyenne S2) / 2
+Ou pondération spécifique si configurée
+4.2.3 Règles Communes
+152400
+38999
+Arrondi à 2 décimales
+Gestion des absences et dispenses (exclusion du calcul)
+Recalcul automatique en cas de modification
+Sauvegarde de l'historique des moyennes
+4.3 Génération des Bulletins
+4.3.1 Structure du Bulletin En-tête
+:
+152400
+38999
+Logo et informations de l'établissement
+Année scolaire
+Période (trimestre ou semestre)
+Informations élève (nom, prénom, classe, matricule)
+Corps du bulletin
+:
+152400
+38999
+Tableau des matières avec notes et coefficients
+Moyenne p
+ar matière
+Moyenne générale de l'élève
+Moyenne de la classe
+Rang de l'élève (optionnel)
+Appréciations par matière (optionnel)
+Pied de page
+:
+152400
+38999
+Appréciation générale
+Décision du conseil de classe
+Signatures (directeur, professeur principal, parent)
+Date d'éd
+ition
+4.3.2 Export PDF
+Génération individuelle ou par classe
+152400
+38999
+Mise en page professionnelle et personnalisable
+Watermark
+de sécurité (optionnel)
+Numérotation et identification unique
+Compression optimale pour envoi électronique
+4.4 Tableau de Bord
+4.4.1 Tableau de bord Administrateur
+152400
+39005
+Nombre total d'élèves, classes, professeurs
+Statistiques de saisie des notes (taux de complétude)
+Graphiques d'évolution
+Activités récentes du système
+Al
+ertes et notifications
+4.4.2 Tableau de bord Professeur
+152400
+39005
+Ses classes et matières
+Progression de saisie des notes
+Moyennes de ses classes
+Calendrier des évaluations
+4.4.3 Tableau de bord
+Censeur
+/
+Conseiller
+152400
+39005
+État d'avancement global par classe
+Notes en attente de validation
+Anomalies
+détectées
+Statistiques
+de
+réussite
+4.4.4 Tableau de bord Proviseur
+152400
+39005
+Bulletins en attente de validation
+Statistiques globales
+Comparaison
+inter-classes
+Indicateurs de performance
+5. SPÉCIFICATIONS TECHNIQUES
+5.1 Architecture du Système
+Type d'application
+: Application web responsive
+Architecture recommandée
+:
+152400
+39005
+Frontend : HTML5, CSS3, JavaScript (
+React
+, Vue.js ou
+Angular
+)
+Backend : PHP (
+Laravel
+/Symfony),
+Python (Django/Flask), Node.js ou Java
+Base de données : MySQL, PostgreSQL ou
+MariaDB
+Serveur web : Apache ou Nginx
+5.2 Base de Données
+5.2.1 Tables Principales Utilisateurs
+:
+id, nom,
+prenom
+, email,
+mot_de_passe
+,
+type_utilisateur
+, statut,
+date_creation
+Élèves
+:
+id, matricule, nom,
+prenom
+,
+date_naissance
+, sexe,
+filiere
+,
+classe_id
+,
+parent_id
+Classes
+:
+id,
+nom_classe
+, niveau,
+filiere
+,
+annee_scolaire
+Matières
+:
+id,
+nom_matiere
+, code, coefficient,
+filiere
+Notes
+:
+id,
+eleve_id
+,
+matiere_id
+,
+periode
+, note,
+date_saisie
+,
+professeur_id
+,
+statut_validation
+Bulletins
+:
+id,
+eleve_id
+,
+periode
+,
+moyenne_generale
+, rang,
+appreciation
+, statut,
+date_validation
+Affectations
+:
+id,
+professeur_id
+,
+matiere_id
+,
+classe_id
+,
+annee_scolaire
+Historique_modifications
+:
+id,
+table_concernee
+,
+enregistrement_id
+,
+utilisateur_id
+, action,
+ancienne_valeur
+,
+nouvelle_valeur
+,
+date_modification
+5.3 Sécurité
+5.3.1 Authentification
+152400
+39005
+Système de conne
+xion sécurisé (email + mot de passe)
+Hachage des mots de passe (
+bcrypt
+, Argon2)
+Session avec timeout automatique
+Authentification à deux facteurs (optionnel)
+5.3.2 Autorisation
+152400
+39005
+Système de rôles et permissions
+Contrôle d'accès basé sur les rôles (RBAC)
+Validation des droits à chaque requête
+Journalisation de toutes les actions sensibles
+5.3.3 Protection des Données
+152400
+39005
+Chiffrement des données sensibles
+Protection contre les injections SQL
+Protection contre les atta
+ques XSS et CSRF
+Sauvegarde automatique quotidienne
+Plan de reprise d'activité
+5.4 Performance
+152400
+39005
+Temps de réponse &lt; 2 secondes pour les opérations courantes
+Support de 500+ utilisateurs simultanés
+Optimisation des requêtes base de données (indexation)
+Mise
+en cache des données fréquemment consultées
+Pagination des
+listes
+longues
+7. WORKFLOW ET PROCESSUS
+7.1 Processus de Gestion des Notes
+Étape 1 : Configuration
+(Administrateur)
+152400
+39005
+Création de l'année scolaire
+Paramétrage des périodes
+Création des classes
+Définition des matières et coefficients
+Affectation professeurs-matières-classes
+Étape 2 : Saisie
+(Professeur)
+152400
+39005
+Accès aux classes assignées
+Saisie des notes par période
+Vérification et sauvegarde
+Étape 3 : Contrôle
+(Censeur/Conseiller)
+152400
+39005
+Vérification de la complétude
+Correction si nécessaire
+Validation des notes
+Étape 4 : Calcul
+(Système)
+152400
+39005
+Calcul automatique des moyennes
+Génération des bulletins
+Étape 5 : Validation
+(Proviseur)
+152400
+39005
+Vérification finale
+Contrôle des bulletins
+Autorisation d'impression
+Étape 6 : Impression
+(Secrétaire)
+152400
+39005
+Export des bulletins validés
+Impression PDF
+Distribution
+Étape 7 : Consultation
+(Parents/Élèves)
+152400
+39005
+Accès aux notes en ligne
+Téléchargement des bulletins
+7.2
+Processus
+d'Impo
+rt
+de Notes
+Censeur
+télécharge
+le
+modèle
+Excel
+Remplissage du fichier avec les notes
+Upload
+du fichier sur la plateforme
+Validation
+automatique
+du format
+Prévisualisation
+et correction
+si
+erreurs
+Confirmation et import
+définitif
+Génération
+du rapport
+d'imp
+ort
+7.3 Notifications et Alertes Notifications Professeur
+:
+152400
+39005
+Rappel de notes à saisir
+Confirmation de saisie
+Notifications Censeur/Conseiller
+:
+152400
+39005
+Notes en attente de validation
+Anomalies détectées
+Notifications Proviseur
+:
+152400
+39005
+Bulletins prêts à valider
+Taux de complétude par classe
+Notifications Parents/Élèves
+:
+Nouvelles notes
+disponibles
+Bulletins
+publiés
+8. CONTRAINTES ET EXIGENCES
+8.1 Contraintes Techniques
+152400
+39005
+Compatibilité navigateurs : Chrome, Firefox, Safari, Edge (versio
+ns récentes)
+Hébergement sécurisé avec certificat SSL
+Sauvegarde quotidienne automatique
+Disponibilité : 99% (hors maintenance programmée)
+8.2 Contraintes Réglementaires
+152400
+39005
+Conformité RGPD (protection des données personnelles)
+Droit d'accès, de rectification
+et de suppression des données
+Conservation des données selon réglementation nationale
+Sécurisation des données sensibles
+8.3 Contraintes d'Exploitation
+152400
+39005
+Documentation utilisateur complète
+Formation des utilisateurs
+Support technique disponible
+Maintenance régulière du système
+15. GLOSSAIRE
+Bulletin
+: Document récapitulatif des notes et moyennes d'un élève pour une période donnée
+Coefficient
+: Facteur multiplicateur appliqué à une note pour le calcul de la moyenne pondérée
+Filière
+: Parcours de formation (Générale ou Technique)
+Matricule
+: Identifian
+t unique de l'élève
+Moyenne pondérée
+: Moyenne calculée en tenant compte des coefficients des matières
+Période
+: Trimestre (filière générale) ou Semestre (filière technique)
+Profil utilisateur
+: Type d'utilisateur avec des droits et fonctionnalités spécifi
+ques
+Traçabilité
+: Capacité à suivre l'historique des modifications
+Validation
+: Action de confirmer et verrouiller des données
+16. ANNEXES
+Annexe A : Modèle de fichier Excel pour import de notes
+Matricule
+Nom
+Prénom
+Classe
+Matière
+Note
+Période
+2024001
+DUPONT
+Marie
+3eA
+Mathématiques
+15.5
+Trimestre
+1
+2024002
+MARTIN
+Jean
+3eA
+Mathématiques
+12.0
+Trimestre
+1
+Annexe B : Exemple de calcul de moyenne
+Filière Générale - Trimestre 1
+Matière
+Note
+Coefficient
+Note × Coefficient
+Mathématiques
+15
+4
+60
+Français
+13
+3
+39
+Histoire
+14
+2
+28
+Anglais
+12
+2
+24
+Total
+-
+11
+151
+Moyenne = 151 / 11 = 13,73
+Annexe C : Exemple de structure de bulletin
+┌─────────────────────────────────────────────────┐
+┌─────────────────────────────────────────────────┐
+│        ÉTABLISSEMENT SCOLAIRE XYZ               │
+│        ÉTABLISSEMENT SCOLAIRE XYZ               │
+│           Année 2024-2025
+│
+│           Année 2024-2025                       │
+│         BULLETIN TRIMESTRIEL                    │
+│         BULLETIN TRIMESTRIEL                    │
+└─────────────────────────────────────────────────┘
+└────────────────────────────────────────────────
+─┘
+4763
+-1498202
+Élève : DUPONT Marie                Classe : 3eA
+Élève : DUPONT Marie                Classe : 3eA
+Matricule : 2024001                 Trimestre : 1
+Matricule : 2024001                 Trimestre : 1
+┌──────────────┬──────┬────────┬──────────────┐
+┌──────────────┬──────┬────────┬──────────────┐
+│  Matière     │ Coef │  Note  │  Moyenne     │
+│  Matière     │ Coef │  Note  │  Moyenne     │
+├──────────────┼──────┼────────┼──────────────┤
+├──────────────┼───
+───┼────────┼──────────────┤
+│ Maths        │  4   │  15.00 │   Classe:    │
+│ Maths        │  4   │  15.00 │   Classe:    │
+│ Français     │  3   │  13.00 │   14.20      │
+│ Français     │  3   │  13.00 │   14.20      │
+│ Histoire     │  2   │  14.00 │              │
+│ Histoire     │  2   │  14.00 │              │
+│ Anglais      │  2   │  12.00 │              │
+│ Anglais      │  2   │  12.00 │              │
+└──────────────┴──
+────┴────────┴──────────────┘
+└──────────────┴──────┴────────┴──────────────┘
+MOYENNE GÉNÉRALE : 13.73     RANG : 8e/30
+MOYENNE GÉNÉRALE : 13.73     RANG : 8e/30
+Appréciation : Bon trimestre. Continue tes
+efforts.
+Appréciation
+: Bon trimestre.
+Continue
+tes
+ef
+forts.
+Signature Directeur        Signature
+Parent
+Signature
+Directeur        Signature Parent

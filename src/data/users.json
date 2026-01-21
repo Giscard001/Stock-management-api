@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1769022101863",
+    "firstName": "Admin",
+    "lastName": "User",
+    "email": "admin@school.com",
+    "password": "$2b$10$5ugWAg5o2rr2ZTZmoN/cYOA1D39PwCX/3NxNwEhtRQDN.CQdUbNaW",
+    "role": "ADMIN",
+    "profilePhoto": null,
+    "isActive": true,
+    "childrenIds": [],
+    "createdAt": "2026-01-21T19:01:41.863Z"
+  },
+  {
+    "id": "1769022102116",
+    "firstName": "Prof",
+    "lastName": "X",
+    "email": "prof@school.com",
+    "password": "$2b$10$5kMnXff7xG3kqV3uzuhLPeMch0vA8twPrrRJ3Q.a1RO/KVfz/cysW",
+    "role": "PROFESSEUR",
+    "profilePhoto": null,
+    "isActive": true,
+    "childrenIds": [],
+    "createdAt": "2026-01-21T19:01:42.116Z"
+  },
+  {
+    "id": "1769022102567",
+    "firstName": "Parent",
+    "lastName": "A",
+    "email": "parent@school.com",
+    "password": "$2b$10$COkqt7j0XuaRUEcrnrLpo.fgCkwDpVYt2v2bFEMOHLefKpNY/gTB2",
+    "role": "PARENT",
+    "profilePhoto": null,
+    "isActive": true,
+    "childrenIds": [],
+    "createdAt": "2026-01-21T19:01:42.567Z"
+  },
+  {
+    "id": "1769022102934",
+    "firstName": "Student",
+    "lastName": "One",
+    "email": "student@school.com",
+    "password": "$2b$10$D2tphkEYhTD5NsmacN3f9O3xl.E3ZmoEM.3jk54W2MbQb0vAoW6Ui",
+    "role": "ELEVE",
+    "profilePhoto": null,
+    "isActive": true,
+    "childrenIds": [],
+    "createdAt": "2026-01-21T19:01:42.934Z"
+  }
+]

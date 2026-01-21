@@ -1,0 +1,57 @@
+{
+    "streams": [
+        {
+            "id": "general",
+            "name": "Enseignement Général",
+            "periods": [
+                "Trimestre 1",
+                "Trimestre 2",
+                "Trimestre 3"
+            ],
+            "levels": [
+                {
+                    "id": "6eme",
+                    "name": "6ème",
+                    "subjects": [
+                        {
+                            "name": "Mathématiques",
+                            "coefficient": 4
+                        },
+                        {
+                            "name": "Français",
+                            "coefficient": 4
+                        },
+                        {
+                            "name": "Anglais",
+                            "coefficient": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "technical",
+            "name": "Enseignement Technique",
+            "periods": [
+                "Semestre 1",
+                "Semestre 2"
+            ],
+            "levels": [
+                {
+                    "id": "1ere_f3",
+                    "name": "1ère F3",
+                    "subjects": [
+                        {
+                            "name": "Mathématiques",
+                            "coefficient": 5
+                        },
+                        {
+                            "name": "Electrotechnique",
+                            "coefficient": 6
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
